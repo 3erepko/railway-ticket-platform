@@ -1,4 +1,5 @@
 # Railway Ticket Platform
+[![Build Status](https://travis-ci.org/3erepko/railway-ticket-platform.svg?branch=master)](https://travis-ci.org/3erepko/railway-ticket-platform) [![Maintainability](https://api.codeclimate.com/v1/badges/72fa4fac0667636d1cf3/maintainability)](https://codeclimate.com/github/3erepko/railway-ticket-platform/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/72fa4fac0667636d1cf3/test_coverage)](https://codeclimate.com/github/3erepko/railway-ticket-platform/test_coverage)
 
 ---
 
