@@ -1,6 +1,11 @@
 language: java
 jdk:
 - oraclejdk9
-
+before_script:
+  - wget https://services.gradle.org/distributions/gradle-4.4.1-bin.zip
+  - unzip -qq gradle-4.4.1-bin.zip
+  - export GRADLE_HOME=$PWD/gradle-4.4.1
+script:
+  - $GRADLE_HOME/bin/gradle build
 notifications:
   email: false
