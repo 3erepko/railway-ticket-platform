@@ -9,7 +9,7 @@ module.exports = {
     module : {
         loaders : [
             {
-                test : /\.js$/,
+                test : /(\.js|\.jsx)$/,
                 loader : 'babel-loader',
                 exclude : /node_modules/,
                 query : {
@@ -17,17 +17,20 @@ module.exports = {
                 }
             },
             {
-                test : /\.jsx$/,
-                loader : 'babel-loader',
-                exclude : /node_modules/,
-                query : {
-                    presets : ['es2017', 'react']
-                }
-            },
-            {
-                test : /\.css$/,
-                loader : ['style-loader', 'css-loader'],
-                exclude : /node_modules/
+                test : /(\.scss|\.css)$/,
+                use : [
+                    {loader : "style-loader"},
+                    {
+                        loader : "css-loader",
+                        options : {
+                            modules : true,
+                            sourceMap : true,
+                            importLoaders : 1,
+                            localIdentName : "[name]--[local]--[hash:base64:8]"
+                        }
+                    },
+                    {loader : "sass-loader"}
+                ]
             }
         ]
     },
@@ -36,5 +39,5 @@ module.exports = {
         host : 'localhost',
         port : 8081,
         hot : true
-    },
+    }
 };
