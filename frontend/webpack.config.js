@@ -29,7 +29,7 @@ module.exports = {
                             localIdentName : "[name]--[local]--[hash:base64:8]"
                         }
                     },
-                    {loader : "sass-loader"}
+                    {loader : "postcss-loader"}
                 ]
             }
         ]
