@@ -1,0 +1,58 @@
+@import '../util/global';
+
+.search-results {
+  &-header {
+    display: flex;
+    align-items: center;
+
+    &-station {
+      text-transform: uppercase;
+    }
+  }
+}
+
+// TEST TODO: przerobić
+$bg: #fffff0;
+$line: #BADA55;
+$red: #f98262;
+$date: black;
+
+body {
+  margin: 0;
+  padding: 0 20px;
+  color: $red;
+  background: $bg;
+}
+
+#timeline {
+  list-style: none;
+  width: 100%;
+  height: 200px;
+  margin: 200px 0 0;
+  border-top: 6px solid $line;
+  display: table;
+  border-spacing: 30px 0;
+  li {
+    display: table-cell;
+    position: relative;
+    min-width: 100px;
+  }
+}
+
+.circle {
+  margin: 0 auto;
+  top: -14px;
+  left: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: $bg;
+  border: 6px solid $red;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+
+.date {
+  margin-top: 10px;
+}
