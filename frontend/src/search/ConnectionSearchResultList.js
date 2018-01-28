@@ -22,10 +22,10 @@ export default class ConnectionSearchResultList extends React.Component {
     let endStation = this.getEndStation(this.props.connectionSearchResults);
 
     return <List>
-      <h1 className="search-results-header">
-        <span className="search-results-header-station">{startStation}</span>
+      <h1 className="search-results__header">
+        <span className="search-results__header-station">{startStation}</span>
         <FontIcon value="chevron_right" className="md-36"/>
-        <span className="search-results-header-station">{endStation}</span>
+        <span className="search-results__header-station">{endStation}</span>
       </h1>
 
       {

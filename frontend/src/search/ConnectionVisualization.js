@@ -1,41 +1,51 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import moment from 'moment';
+
 export default class ConnectionVisualization extends React.Component {
 
   constructor(props) {
     super(props);
   }
 
+  formatTime(timestamp) {
+    return moment(timestamp).format("kk:mm");
+  }
+
+  formatDate(timestamp) {
+    return moment(timestamp).format("DD.MM");
+  }
+
   render() {
     const { connectionData } = this.props;
+    const firstStretch = connectionData[0];
+
     return (
-        <div>
-          <pre>
+        <div className="connection-visualization__container">
+          <ul className="connection-visualization">
+            <li key={firstStretch.toString()}>
+              <span className="connection-visualization__city">{firstStretch.fromStationAbbreviation}</span>
+              <span className="connection-visualization__circle"></span>
+              <span className="connection-visualization__datetime">
+                {this.formatTime(firstStretch.departureTimestamp)}
+                <br/>
+                {this.formatDate(firstStretch.departureTimestamp)}
+              </span>
+            </li>
             {
-              connectionData.map(function(stretch) {
-                return JSON.stringify(stretch, null, 2);
+              connectionData.map((stretch) => {
+                return <li key={stretch.toString()}>
+                  <span className="connection-visualization__city">{stretch.toStationAbbreviation}</span>
+                  <span className="connection-visualization__circle"></span>
+                  <span className="connection-visualization__datetime">
+                    {this.formatTime(stretch.arrivalTimestamp)}
+                    <br/>
+                    {this.formatDate(stretch.arrivalTimestamp)}
+                  </span>
+                </li>;
               })
             }
-          </pre>
-          {/* TEST TODO: przerobić */}
-          <ul id="timeline">
-            <li>
-              <div className="date">2008</div>
-              <span className="circle"></span>
-            </li>
-            <li>
-              <span className="circle"></span>
-              <div className="date">2009</div>
-            </li>
-            <li>
-              <span className="circle"></span>
-              <div className="date">2010</div>
-            </li>
-            <li>
-              <span className="circle"></span>
-              <div className="date">2011</div>
-            </li>
           </ul>
         </div>
     );

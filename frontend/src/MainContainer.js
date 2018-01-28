@@ -11,7 +11,7 @@ const results = [
       "toStationName": "Szczecin Główny",
       "toStationAbbreviation": "SZZ GŁ",
       "departureTimestamp": 1517051026000,
-      "arrivalTimestamp": 1517072626000,
+      "arrivalTimestamp": 1517015526000,
       "price": 70.00,
       "type": "TLK"
     },
@@ -20,7 +20,7 @@ const results = [
       "fromStationAbbreviation": "SZZ GŁ",
       "toStationName": "Bruksela",
       "toStationAbbreviation": "BRU",
-      "departureTimestamp": 10.5,
+      "departureTimestamp": 1527075526000,
       "arrivalTimestamp": 1517109346000,
       "price": 290.75,
       "type": "EIC"
@@ -33,7 +33,7 @@ const results = [
       "toStationName": "Bruksela",
       "toStationAbbreviation": "BRU",
       "departureTimestamp": 1517584546000,
-      "arrivalTimestamp": 1517694520000,
+      "arrivalTimestamp": 1517584546000,
       "price": 42.70,
       "type": "TLK"
     }
