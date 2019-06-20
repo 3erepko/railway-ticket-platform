@@ -18,7 +18,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "eslint": "^4.16.0",
+    "eslint": "^4.18.2",
     "eslint-plugin-react": "^7.5.1",
     "materializecss": "^1.0.11",
     "node-sass": "^4.7.2",
