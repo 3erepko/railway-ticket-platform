@@ -21,7 +21,7 @@
     "eslint": "^4.16.0",
     "eslint-plugin-react": "^7.5.1",
     "materializecss": "^1.0.11",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-each": "^0.10.0",
     "postcss-import": "^11.0.0",
